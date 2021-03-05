@@ -22,14 +22,18 @@ public class Employee {
     @Column(name = "salary")
     private int salary;
 
+    @Column(name = "patronymic")
+    private String patronymic;
+
     public Employee() {
     }
 
-    public Employee(String name, String surname, String department, int salary) {
+    public Employee(String name, String surname, String department, int salary, String patronymic) {
         this.name = name;
         this.surname = surname;
         this.department = department;
         this.salary = salary;
+        this.patronymic = patronymic;
     }
 
     public int getId() {
@@ -70,5 +74,13 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    public String getPatronymic() {
+        return patronymic;
+    }
+
+    public void setPatronymic(String patronymic) {
+        this.patronymic = patronymic;
     }
 }
